@@ -19,6 +19,7 @@ public class PanelTablero extends javax.swing.JPanel {
      */
     public PanelTablero() {
         initComponents();
+        
         //MouseAdapter
         
         this.addMouseListener(new MouseAdapter ()

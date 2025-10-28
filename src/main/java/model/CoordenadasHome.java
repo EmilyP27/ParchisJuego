@@ -9,16 +9,24 @@ package model;
  * @author EMILI VALERIA
  */
 public class CoordenadasHome {
-    private Coordenadas[] casa_roja = {
-    new Coordenadas (79,72)};
-    
-    private Coordenadas[] casa_amarilla = {
-    new Coordenadas (404,390)};
-    
-    private Coordenadas[] casa_azul = {
-    new Coordenadas (400,68)};
-    
-    private Coordenadas[] casa_verde = {
-    new Coordenadas (75,391)};
-    
-}
+
+    private Coordenadas[] home = new Coordenadas[]{
+        new Coordenadas(79, 72),//Rojo
+        new Coordenadas(404, 390),//Amarillo
+        new Coordenadas(400, 68),//Azul
+        new Coordenadas(75, 391)//Verde
+
+    };
+    // Va a leer el id de los colores para pintar en e tablero las fihas que van a jugar
+    public Coordenadas getHome(int colorId) {
+
+        if (colorId < 0) {
+            colorId = 0;
+        }
+        if (colorId > 3) {
+            colorId = 3;
+        }
+        return home[colorId];
+    }
+
+}//fin de la clase
