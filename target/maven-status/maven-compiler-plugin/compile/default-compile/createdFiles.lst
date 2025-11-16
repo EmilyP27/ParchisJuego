@@ -1,4 +1,6 @@
 controller\Controller.class
+model\Sonidos.class
+model\Temporizador$1.class
 view\GUIInstrucciones.class
 model\CoordenadasHome.class
 model\TableroCoordenadas.class
@@ -6,15 +8,19 @@ view\GUIInicio$3.class
 main\ParchisJuego.class
 model\Ficha.class
 view\GUIInicio$5.class
+model\Temporizador.class
 model\Dado.class
 view\GUIJuego.class
-view\PanelTablero$1.class
+model\Temporizador$2.class
+model\Reglas.class
 view\GUIInicio$2.class
 view\GUIInicio$4.class
 view\GUIInicio.class
 model\Coordenadas.class
 view\PanelTablero.class
 view\GUICreditos.class
+model\Colores.class
+model\Preguntas.class
 view\GUIHistoria.class
 view\GUIInicio$1.class
 view\PanelControl.class

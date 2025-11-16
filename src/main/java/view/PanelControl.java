@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author EMILI VALERIA
@@ -15,8 +18,52 @@ public class PanelControl extends javax.swing.JPanel {
      */
     public PanelControl() {
         initComponents();
+
     }
 
+    public JButton getBtnDado() {
+        return btnDado;
+    }
+
+    public JButton getBtnReinicio() {
+        return btnReinicio;
+    }
+
+    public void setLblFichaTurno(String texto) {
+        lblFichaTurno.setText("Ficha turno: " + texto);
+    }
+
+    public void setLblNumeroDado(int valor) {
+        lblNumeroDado.setText("Numero dado: " + valor);
+    }
+
+    public JLabel getTxtTiempo() {
+        return txtTiempo;
+    }
+
+    //set para el label del tiempo 
+    public void setTxtTiempo(int valor) {
+        txtTiempo.setText("Tiempo : " + valor);
+    }
+
+    public JLabel getTxtPuntosJugador() {
+        return txtPuntosJugador;
+    }
+
+    public void setTxtPuntosJugador(int valor) {
+       txtPuntosJugador.setText("Puntos Jugador : " + valor);
+    }
+
+    public JLabel getTxtPuntosOponente() {
+        return txtPuntosOponente;
+    }
+
+    public void setTxtPuntosOponente(int valor) {
+       txtPuntosOponente.setText("Puntos Oponenentes :" + valor); 
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,6 +78,9 @@ public class PanelControl extends javax.swing.JPanel {
         btnMenu = new javax.swing.JButton();
         lblNumeroDado = new javax.swing.JLabel();
         lblFichaTurno = new javax.swing.JLabel();
+        txtTiempo = new javax.swing.JLabel();
+        txtPuntosOponente = new javax.swing.JLabel();
+        txtPuntosJugador = new javax.swing.JLabel();
 
         btnDado.setText("Dado");
 
@@ -42,19 +92,36 @@ public class PanelControl extends javax.swing.JPanel {
 
         lblFichaTurno.setText("Ficha Turno");
 
+        txtTiempo.setText("Tiempo");
+
+        txtPuntosOponente.setText("Puntos Oponente");
+
+        txtPuntosJugador.setText("Puntos Jugador");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFichaTurno)
-                    .addComponent(btnMenu)
-                    .addComponent(btnReinicio)
-                    .addComponent(btnDado)
-                    .addComponent(lblNumeroDado))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnMenu)
+                            .addComponent(btnReinicio)
+                            .addComponent(btnDado)
+                            .addComponent(lblNumeroDado)
+                            .addComponent(lblFichaTurno)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(txtTiempo)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(139, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPuntosJugador)
+                    .addComponent(txtPuntosOponente))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -65,11 +132,17 @@ public class PanelControl extends javax.swing.JPanel {
                 .addComponent(lblNumeroDado)
                 .addGap(18, 18, 18)
                 .addComponent(lblFichaTurno)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addComponent(txtPuntosJugador)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtPuntosOponente)
+                .addGap(24, 24, 24)
                 .addComponent(btnReinicio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnMenu)
-                .addGap(41, 41, 41))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtTiempo)
+                .addGap(19, 19, 19))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -80,5 +153,8 @@ public class PanelControl extends javax.swing.JPanel {
     private javax.swing.JButton btnReinicio;
     private javax.swing.JLabel lblFichaTurno;
     private javax.swing.JLabel lblNumeroDado;
+    private javax.swing.JLabel txtPuntosJugador;
+    private javax.swing.JLabel txtPuntosOponente;
+    private javax.swing.JLabel txtTiempo;
     // End of variables declaration//GEN-END:variables
 }
