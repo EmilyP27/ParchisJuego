@@ -4,6 +4,8 @@
  */
 package view;
 
+import controller.Controller;
+
 /**
  *
  * @author TI-IN
@@ -15,10 +17,18 @@ public class GUIJuego extends javax.swing.JFrame {
     /**
      * Creates new form GUIJuego
      */
-    public GUIJuego() {
+    public GUIJuego(Controller control) {
         initComponents();
         
         
+    }
+
+    public PanelControl getPanelControl1() {
+        return panelControl1;
+    }
+
+    public PanelTablero getPanelTablero1() {
+        return panelTablero1;
     }
 
     /**
